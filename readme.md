@@ -1,6 +1,6 @@
 # Test technique Datapool
 
-En shell, chargez les fichiers file_1.csv et file_2.csv à la racine du bucket GCS g://auchan-itcorp-dev_dc_fallou/
+En shell, chargez les fichiers file_1.csv et file_2.csv à la racine du bucket GCS gs://auchan-itcorp-dev_dc_fallou/
 
 Créez un fichier main.py qui executera les actions suivantes:
 
@@ -26,8 +26,8 @@ schema:
 
 nom de la table: turnover (la table n'existe pas)
 
-3. Exécution, en se basant sur les tables store et turnover, d'une requête permetant de trouver le magasin auchan qui à le plus gros chiffre d'affaire dans le Nord et d'afficher le plus gros chiffre d'affaire (uniquement).
+3. Exécution, en se basant sur les tables store et turnover, d'une requête permetant de trouver le magasin auchan qui à le plus gros chiffre d'affaire dans le Nord et afficher le plus gros chiffre d'affaire (uniquement).
 Sauvegarder le resultat dans une table richest_store dans le dataset test_fallou
 
-4. Exécution, en se basant sur les tables store et turnover, d'une requête permetant de trouver le magasin auchan qui à le plus gros chiffre d'affaire dans le Nord et d'afficher le plus gros chiffre d'affaire et le magasin associé à ce dernier.
+4. Exécution, en se basant sur les tables store et turnover, d'une requête permetant de trouver le magasin auchan qui à le plus gros chiffre d'affaire dans le Nord et afficher le plus gros chiffre d'affaire et le magasin associé à ce dernier.
 
