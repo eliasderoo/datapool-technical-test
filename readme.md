@@ -1,33 +1,38 @@
 # Test technique Datapool
 
-En shell, chargez les fichiers file_1.csv et file_2.csv à la racine du bucket GCS gs://auchan-itcorp-dev_dc_fallou/
+## Question 1
+En shell, charger les fichiers *file_1.csv* et *file_2.csv* à la racine du bucket GCS `gs://auchan-itcorp-dev_dc_fallou/`.
 
-Créez un fichier main.py qui executera les actions suivantes:
+## Question 2
+Créer un fichier *main.py* qui permet de réaliser les actions suivantes :
 
-1. Chargement du fichier file_1.csv sur bigquery.
-projet: auchan-itcorp-dev
-dataset: test_fallou
-schema: auto
-nom de la table: store (la table n'existe pas)
+### Question 2.1
+Chargement du fichier *file_1.csv* depuis GCS vers BigQuery. Le fichier sera à charger dans le projet `auchan-itcorp-dev` dans le dataset `test_fallou`, dans une table qu'il faudra nommer `store` et dont le schéma sera auto-généré.
 
-2. Chargement du fichier file_2.csv sur bigquery.
-projet: auchan-itcorp-dev
-dataset: test_fallou
-schema:
-- champ 1: 
-    -   name: mag
-    -   type: string
-- champ 2:
-    -   name: ca
-    -   type: integer
-- champ 3:
-    -   name: ca_date
-    -   type: date
+### Question 2.2
+Chargement du fichier *file_2.csv* depuis GCS vers BigQuery. Le fichier sera à charger dans le projet `auchan-itcorp-dev` dans le dataset `test_fallou`, dans une table qu'il faudra nommer `turnover` et dont le schéma respectera les spécifications ci-dessous :
+   - 1er champ : 
+     - Nom : mag
+     - Type : string
+   - 2ème champ :
+     - Nom : ca
+     - Type : integer
+   - 3ème champ :
+     - Nom : ca_date
+     - Type: date
 
-nom de la table: turnover (la table n'existe pas)
+## Question 3
+En se basant sur les tables `store` et `turnover` :
+### Question 3.1
+Exécuter une requête permettant d'afficher le total du chiffre d'affaires du 2 avril 2021 pour les magasins du Nord. Sauvegarder le resultat dans une table qu'on nommera `total_turnover`, dans le dataset `test_fallou`.
 
-3. Exécution, en se basant sur les tables store et turnover, d'une requête permetant de trouver le magasin auchan qui à le plus gros chiffre d'affaire dans le Nord et afficher le plus gros chiffre d'affaire (uniquement).
-Sauvegarder le resultat dans une table richest_store dans le dataset test_fallou
+### Question 3.2
+Exécuter une requête permettant d'afficher :
+- l'ID du ou des magasin(s) ayant fait le plus grand total de chiffre d'affaires parmi les magasins du Nord.
+- le total de chiffre d'affaires de ce(s) magasin(s).
 
-4. Exécution, en se basant sur les tables store et turnover, d'une requête permetant de trouver le magasin auchan qui à le plus gros chiffre d'affaire dans le Nord et afficher le plus gros chiffre d'affaire et le magasin associé à ce dernier.
-
+### Question 3.3
+Exécuter une requête permettant d'afficher une ligne pour chaque région. Chaque ligne comportera :
+- la région.
+- le nom du magasin avec le record du plus grand chiffre d'affaires sur une journée dans cette région.
+- le montant du chiffre d'affaires engrangé par ce magasin sur cette journée record.
