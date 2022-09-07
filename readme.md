@@ -1,16 +1,16 @@
 # Test technique Datapool
 
 ## Question 1
-En shell, charger les fichiers *file_1.csv* et *file_2.csv* à la racine du bucket GCS `gs://auchan-itcorp-dev_dc_fallou/`.
+En shell, charger les fichiers *file_1.csv* et *file_2.csv* à la racine du bucket GCS `gs://auchan-itcorp-dev_test_technique_datapool/`.
 
 ## Question 2
 Créer un fichier *main.py* qui permet de réaliser les actions suivantes :
 
 ### Question 2.1
-Chargement du fichier *file_1.csv* depuis GCS vers BigQuery. Le fichier sera à charger dans le projet `auchan-itcorp-dev` dans le dataset `test_fallou`, dans une table qu'il faudra nommer `store` et dont le schéma sera auto-généré.
+Chargement du fichier *file_1.csv* depuis GCS vers BigQuery. Le fichier sera à charger dans le projet `auchan-itcorp-dev` dans le dataset `test_technique_datapool`, dans une table qu'il faudra nommer `store` et dont le schéma sera auto-généré.
 
 ### Question 2.2
-Chargement du fichier *file_2.csv* depuis GCS vers BigQuery. Le fichier sera à charger dans le projet `auchan-itcorp-dev` dans le dataset `test_fallou`, dans une table qu'il faudra nommer `turnover` et dont le schéma respectera les spécifications ci-dessous :
+Chargement du fichier *file_2.csv* depuis GCS vers BigQuery. Le fichier sera à charger dans le projet `auchan-itcorp-dev` dans le dataset `test_technique_datapool`, dans une table qu'il faudra nommer `turnover` et dont le schéma respectera les spécifications ci-dessous :
    - 1er champ : 
      - Nom : mag
      - Type : string
@@ -24,7 +24,7 @@ Chargement du fichier *file_2.csv* depuis GCS vers BigQuery. Le fichier sera à 
 ## Question 3
 En se basant sur les tables `store` et `turnover` :
 ### Question 3.1
-Exécuter une requête permettant d'afficher le total du chiffre d'affaires du 2 avril 2021 pour les magasins du Nord. Sauvegarder le resultat dans une table qu'on nommera `total_turnover`, dans le dataset `test_fallou`.
+Exécuter une requête permettant d'afficher le total du chiffre d'affaires du 2 avril 2021 pour les magasins du Nord. Sauvegarder le resultat dans une table qu'on nommera `total_turnover`, dans le dataset `test_technique_datapool`.
 
 ### Question 3.2
 Exécuter une requête permettant d'afficher :
